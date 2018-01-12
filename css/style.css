@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: 1.55;
-  color: #333;
+  /*color: #333;*/
   font-size: 400;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
@@ -996,4 +996,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+.location a {
+  font-weight: bold;
+  color: #97f6ff;
 }
