@@ -1022,15 +1022,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #97f6ff;
 }
 
+.smallscr {
+  display: none;
+  visibility: hidden;
+}
+
 @media screen and (max-width: 509px) {
   .hero-brand img {
     width: 100% !important;
   }
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 326px) {
   .hero {
     display: none;
+  }
+  .smallscr {
+    display: initial;
+    visibility: visible;
   }
 }
 
