@@ -531,10 +531,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ==================================================
   Parallax Styling
   ================================================== */
+
+.block table {
+  height: 100%;
+}
+
 .block {
   color: #fff;
-  height: 490px;
-  overflow: hidden;
+  /*height: 900px;*/
+  /*display: block;*/
+  /*overflow: auto;*/
   padding-top: 85px;
 }
 
