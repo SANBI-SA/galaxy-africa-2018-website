@@ -34,6 +34,8 @@
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+  <link href="lib/stacktable/stacktable.css" rel="stylesheet">
+
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -159,93 +161,89 @@
     <h2 class="center ">
         Conference Programme
       </h2>
-      <div class="row table-responsive">
-      <table class="table block">
-        <!-- <tr>
-          <th class="tg-yw4l">Galaxy Africa timetable 3 - 5 April 2018</th>
-          <th class="tg-yw4l"></th>
-          <th class="tg-yw4l"></th>
-          <th class="tg-yw4l"></th>
-        </tr> -->
-        <thead>
-          <tr>
-            <th scope="col">Time</td>
-            <th scope="col">Day 1</td>
-            <th scope="col">Day 2</td>
-            <th scope="col">Day 3</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-
-            <td class="tg-yw4l">09:00 - 09:45</td>
-            <td class="tg-yw4l">DIRISA:The National Research Intensive Data Lanscape<br>Anwar Vahed (Director of DIRISA)</td>
-            <td class="tg-yw4l"></td>
-            <td class="tg-yw4l"></td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">10:00 - 11:00</td>
-            <td class="tg-yw4l">Welcome to the Galaxy<br>Bjoern Gruening (University of Freiburg)</td>
-            <td class="tg-yw4l">Community-driven training for biological data analysis with the Galaxy Training Network<br>Bérénice Batut (University of Freiburg)</td>
-            <td class="tg-yw4l">Horizontal scaling with Galaxy<br>Enis Afghan (Galaxy Team, John Hopkins University)</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">11:00 - 11:30</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">11:30 - 12:00</td>
-            <td class="tg-yw4l">Building communities of Practice:Lessons from The Carpentries<br>Caroline Ajilogba (North West University)</td>
-            <td class="tg-yw4l">From biobanking to bioinformatics<br>Hocine Bendou (SANBI)</td>
-            <td class="tg-yw4l">Understanding M. tuberculosis variants using Galaxy and the Combat TB Explorer<br>Thoba Lose (SANBI)</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">12:00 - 12:30</td>
-            <td class="tg-yw4l">The COMBAT-TB Project: Accessible tools for data intensive M. tuberculosis research<br>Peter van Heusden (SANBI)</td>
-            <td class="tg-yw4l">Using Galaxy for M. tuberculosis variant calling<br>Ziphozakhe Mashologu (SANBI)</td>
-            <td class="tg-yw4l">Moving code to data using workflow standards and containers<br>Eugene de Beste (SANBI)</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">12:30 - 13:00</td>
-            <td class="tg-yw4l">Building Pipelines to Support African Bioinformatics: the H3ABioNet Pipelines Project<br>Scott Hazelhurst (University of Witwatersrand)</td>
-            <td class="tg-yw4l">A thousand genomes in a Galaxy (server) far, far away…<br>Charles Hefer (Agricultural Research Council)</td>
-            <td class="tg-yw4l">Solving glycobioinformatics with Galaxy<br>Chris Barnett (University of Cape Town)</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">13:00 - 14:00</td>
-            <td class="tg-yw4l">Lunch</td>
-            <td class="tg-yw4l">Lunch</td>
-            <td class="tg-yw4l">Lunch</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">14:00 - 15:00</td>
-            <td class="tg-yw4l">Tour of Mayibuye Centre Collection</td>
-            <td class="tg-yw4l">Training: Microbial Variant Calling</td>
-            <td class="tg-yw4l">Training: Metagenomics 2 / Galaxy Server admin</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">15:00 - 15:30</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-            <td class="tg-yw4l">Coffee/Tea</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">15:30 - 17:00</td>
-            <td class="tg-yw4l">Training: Galaxy 101</td>
-            <td class="tg-yw4l">Training: 16S Metagenomics</td>
-            <td class="tg-yw4l">Training: Galaxy Server admin</td>
-          </tr>
-          <tr>
-            <td class="tg-yw4l">17:30 - 18:30</td>
-            <td class="tg-yw4l">Transport to hotel</td>
-            <td class="tg-yw4l">Conference Dinner</td>
-            <td class="tg-yw4l">Transport to hotel</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div id="tableDiv" class="row">
+          <table id="agenda-example">
+            <tbody>
+            <tr>
+                <th>Time</th>
+                <th>Day 1</th>
+                <th>Day 2</th>
+                <th>Day 3</th>
+            </tr>
+            <tr>
+                <td>09:00 - 09:45</td>
+                <td colspan="3">DIRISA:The National Research Intensive Data Lanscape<br/>
+                  Anwar Vahed (Director of DIRISA)</td>
+            </tr>
+            <tr>
+              <td style="font-weight: normal;">10:00 - 11:00</th>
+              <td>Welcome to the Galaxy<br />
+                  Bjoern Gruening (University of Freiburg)</td>
+              <td>Community-driven training for biological data analysis with the Galaxy Training Network<br />
+                  Bérénice Batut (University of Freiburg)</td>
+              <td>Horizontal scaling with Galaxy<br />
+                  Enis Afghan (Galaxy Team, John Hopkins University)</td>
+            </tr>
+            <tr>
+                <td>11:00 - 11:30</td>
+                <td class="alldays" colspan="3">Coffee/Tea</td>
+            </tr>
+            <tr>
+                <td>11:30 - 12:00</td>
+                <td>Building communities of Practice:Lessons from The Carpentries<br/>
+                    Caroline Ajilogba (North West University)</td>
+                <td>From biobanking to bioinformatics<br/>
+                    Hocine Bendou (SANBI)</td>
+                <td>Understanding M. tuberculosis variants using Galaxy and the Combat TB Explorer<br/>
+                    Thoba Lose (SANBI)</td>
+            </tr>
+            <tr>
+                <td>12:00 - 12:30</td>
+                <td>The COMBAT-TB Project: Accessible tools for data intensive M. tuberculosis research<br/>
+                    Peter van Heusden (SANBI)</td>
+                <td>Using Galaxy for M. tuberculosis variant calling<br/>
+                    Ziphozakhe Mashologu (SANBI)st</td>
+                <td>Moving code to data using workflow standards and containers<br/>
+                    Eugene de Beste (SANBI)</td>
+            </tr>
+            <tr>
+                <td>12:30 - 13:00</td>
+                <td>Building Pipelines to Support African Bioinformatics: the H3ABioNet Pipelines Project<br/>
+                    Scott Hazelhurst (University of Witwatersrand)</td>
+                <td>A thousand genomes in a Galaxy (server) far, far away…<br/>
+                    Charles Hefer (Agricultural Research Council)</td>
+                <td>Solving glycobioinformatics with Galaxy<br/>
+                    Chris Barnett (University of Cape Town)</td>
+            </tr>
+            <tr>
+                <td>13:00 - 14:00</td>
+                <td class="alldays" colspan="3">Lunch</td>
+            </tr>
+            <tr>
+                <td>14:00 - 15:00</td>
+                <td>Tour of Mayibuye Centre Collection</td>
+                <td>Training: Microbial Variant Calling</td>
+                <td>Training: Metagenomics 2 / Galaxy Server admin</td>
+            </tr>
+            <tr>
+                <td>15:00 - 15:30</td>
+                <td class="alldays" colspan="3">Coffee/Tea</td>
+            </tr>
+            <tr>
+                <td>15:30 - 17:00</td>
+                <td>Training: Galaxy 101</td>
+                <td>Training: 16S Metagenomics</td>
+                <td>Training: Galaxy Server admin</td>
+            </tr>
+            <tr>
+                <td>17:00 - 18:30</td>
+                <td>Transport to hotel</td>
+                <td>Conference Dinner</td>
+                <td>Transport to hotel</td>
+            </tr>
+            </tbody>
+          </table> 
+        </div>
       <!-- <div class="row">
         <div class="col-md">
           <h4>Tuesday</h4>
@@ -482,6 +480,7 @@
   <script src="lib/stickyjs/sticky.js"></script>
   <script src="lib/parallax/parallax.js"></script>
   <script src="lib/lockfixed/lockfixed.min.js"></script>
+  <script src="lib/stacktable/stacktable.js"></script>
 
   <!-- Template Specisifc Custom Javascript File -->
   <script src="js/custom.js"></script>
